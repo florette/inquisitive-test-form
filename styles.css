@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(249, 240, 255);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.form-container {
+  width: 360px;
+  background-color: white;
+  margin: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 10px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.success-message {
+  font-family: "Roboto", sans-serif;
+  background-color: #3f89f8;
+  padding: 15px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.form-field {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  font-size: 16px;
+  border: 0;
+}
+
+.error-message {
+  font-size: 14px;
+  color: red;
+  margin-bottom: 15px;
+}
+
+sup {
+  color: red;
+}
+
+input {
+  background: #f2f2f2;
+}
+
+.error {
+  border-style: solid;
+  border: 2px solid #ffa4a4;
+}
+
+button {
+  background-color: rgb(83, 29, 171);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(114, 46, 209);
+}
+
+button:disabled {
+  cursor: default;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0 0 1rem;
+  border: 0;
+}
+
+legend {
+  font-weight: 500;
+  font-size: 1.3rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.label {
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+}
+
+select {
+  background-color: #f2f2f2;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+}
+
+.flex-child label {
+  width: auto;
+  margin-top: 0;
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.notes {
+  max-width: 700px;
+  margin: auto;
+}

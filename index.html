@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Test form" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Form</title>
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="form-container">
+      <form class="register-form" id="form">
+        <div class="success-message hidden" id="success-message">
+          Your account was created successfully!
+        </div>
+        <fieldset>
+          <legend>Your details</legend>
+          <label class="label" for="email">Email<sup>*</sup></label>
+          <input
+            id="email"
+            class="form-field"
+            type="email"
+            name="email"
+            value=""
+          />
+          <div id="email-error" class="error-message hidden">
+            Please enter a valid email address
+          </div>
+          <label class="label" for="password">Password<sup>*</sup></label>
+          <input
+            id="password"
+            class="form-field"
+            type="password"
+            name="password"
+            value=""
+          />
+          <div id="password-error" class="error-message hidden">
+            Please enter valid password: 8 characters or more
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Your animal</legend>
+          <label class="label" for="colour">Colour<sup>*</sup></label>
+          <select class="form-field" name="colour" id="colour">
+            <option value="">Choose colour</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+          </select>
+          <div id="colour-error" class="error-message hidden">
+            Please select a colour
+          </div>
+          <div class="label">Animal<sup>*</sup></div>
+          <div class="container-flex">
+            <div class="flex-child">
+              <input class="checkbox" type="checkbox" id="bear" name="bear" />
+              <label for="bear">Bear</label>
+            </div>
+            <div class="flex-child">
+              <input class="checkbox" type="checkbox" id="tiger" name="tiger" />
+              <label for="tiger">Tiger</label>
+            </div>
+            <div class="flex-child">
+              <input class="checkbox" type="checkbox" id="snake" name="snake" />
+              <label for="snake">Snake</label>
+            </div>
+            <div class="flex-child">
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="donkey"
+                name="donkey"
+              />
+              <label for="donkey">Donkey</label>
+            </div>
+          </div>
+          <div id="animal-error" class="error-message hidden">
+            Please select at least 2 animals
+          </div>
+          <div class="optional-field hidden" id="optional_field">
+            <label class="label" for="type_tiger"
+              >Type of tiger<sup>*</sup></label
+            >
+            <input
+              id="type_tiger"
+              class="form-field"
+              type="text"
+              name="type_tiger"
+              value=""
+            />
+            <div id="tiger-error" class="error-message hidden">
+              Please enter your type of tiger
+            </div>
+          </div>
+        </fieldset>
+        <button class="form-field" id="submit_btn">Create account</button>
+      </form>
+    </div>
+    <div class="notes">
+      <h2>Rationale</h2>
+      <p>
+        I tried to add inline form field validation as well as on submit, it is
+        better for accessibility as you can amend the field on the spot instead
+        of having to tab all the way back to the invalid field.
+      </p>
+      <p>The form is accessible semantically and also JS accessible.</p>
+      <p>
+        I show the tiger type field only if the Tiger is checked: it is a better
+        user experience.
+      </p>
+      <p>Tested in Chrome, FF, Safari and Brave.</p>
+      <p>
+        Note: CSS is messy, sorry I didn't really concentrate on this part. I
+        left the select element native so it might look odd in other browsers
+      </p>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
